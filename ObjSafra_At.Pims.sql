@@ -32,8 +32,8 @@ left join
     pimscs.tipopropri d on
         a.cd_tp_propr = d.cd_tp_propr
 where
-    a.cd_empresa = 2604 and
-    a.cd_safra >= 2024 and
+    a.cd_empresa = 2604 and--Filtrando ITB
+    a.cd_safra >= 2024 and--Filtrando Safras Futuras (Erro Processo)
     a.cd_hist not in ('E','S') and
     a.dt_historico = 
         (
