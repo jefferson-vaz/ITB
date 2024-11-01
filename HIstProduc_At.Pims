@@ -5,9 +5,9 @@ select--HistProduc
   b.da_upnivel1 as Propriedade,
   a.cd_upnivel2 as Bloco,
   a.cd_upnivel3 as Talhao,
-  c.da_estagio as Estagio Corte,
-  c.no_corte as No.Corte,
-  a.cd_fren_tran as No.Frente Colheita,
+  c.da_estagio as Estagio_Corte,
+  c.no_corte as No_Corte,
+  a.cd_fren_tran as No_Frente_Colheita,
   case
     when to_number(a.cd_fren_tran) = 2 then 'Frente 1' --Isto foi um erro de registro que ainda não foi ajustado no sistema
     when to_number(a.cd_fren_tran) = 265 then 'Frente 1'
@@ -24,15 +24,15 @@ select--HistProduc
     when to_number(a.cd_fren_tran) = 409 then 'Frente Spot (Walter)'
     when to_number(a.cd_fren_tran) = 420 then 'Frente Spot (Walter)'
     when to_number(a.cd_fren_tran) = 276 then 'Frente Daltro Reis'
-  end as Frente Colheita,
+  end as Frente_Colheita,
   case
     when to_number(a.cd_fren_tran) in (265,266,267,268) then 'CTT.Usina'
     when to_number(a.cd_fren_tran) in (273,276,278,283,285,409,419,420) then 'CTT.Terceiro'
     when to_number(a.cd_fren_tran) = 279 then 'CT.Terceiro + T.Usina'
     when to_number(a.cd_fren_tran) = 280 then 'CT.Terc.Extra + T.Usina'
-  end as Estrutura Colheita,
+  end as Estrutura_Colheita,
   to_date(a.dt_historico,'dd/mm/yyyy') as Data,
-  sum(a.qt_cana_ent/1000) as Toneladas Cana
+  sum(a.qt_cana_ent/1000) as Toneladas_Cana
 from
   pimscs.histproduc a 
 inner join 
