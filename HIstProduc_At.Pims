@@ -17,12 +17,12 @@ select--HistProduc
     when to_number(a.cd_fren_tran) = 273 then 'Frente Rizzi'
     when to_number(a.cd_fren_tran) = 278 then 'Frente Pau DAlho'
     when to_number(a.cd_fren_tran) = 279 then 'Frente Marcinho'
-    when to_number(a.cd_fren_tran) = 280 then 'Frente Marcinho (CT Extra)'
+    when to_number(a.cd_fren_tran) = 280 then 'Frente Marcinho - CT Extra'
     when to_number(a.cd_fren_tran) = 283 then 'Frente Frente Caio Junqueira'
     when to_number(a.cd_fren_tran) = 285 then 'Frente ACP'
-    when to_number(a.cd_fren_tran) = 419 then 'Frente Spot (Valdir)'
-    when to_number(a.cd_fren_tran) = 409 then 'Frente Spot (Walter)'
-    when to_number(a.cd_fren_tran) = 420 then 'Frente Spot (Walter)'
+    when to_number(a.cd_fren_tran) = 419 then 'Frente Spot - Valdir'
+    when to_number(a.cd_fren_tran) = 409 then 'Frente Spot - Walter'
+    when to_number(a.cd_fren_tran) = 420 then 'Frente Spot - Walter'
     when to_number(a.cd_fren_tran) = 276 then 'Frente Daltro Reis'
   end as Frente_Colheita,
   case
@@ -65,12 +65,12 @@ group by
     when to_number(a.cd_fren_tran) = 273 then 'Frente Rizzi'
     when to_number(a.cd_fren_tran) = 278 then 'Frente Pau DAlho'
     when to_number(a.cd_fren_tran) = 279 then 'Frente Marcinho'
-    when to_number(a.cd_fren_tran) = 280 then 'Frente Marcinho (CT Extra)'
+    when to_number(a.cd_fren_tran) = 280 then 'Frente Marcinho - CT Extra'
     when to_number(a.cd_fren_tran) = 283 then 'Frente Frente Caio Junqueira'
     when to_number(a.cd_fren_tran) = 285 then 'Frente ACP'
-    when to_number(a.cd_fren_tran) = 419 then 'Frente Spot (Valdir)'
-    when to_number(a.cd_fren_tran) = 409 then 'Frente Spot (Walter)'
-    when to_number(a.cd_fren_tran) = 420 then 'Frente Spot (Walter)'
+    when to_number(a.cd_fren_tran) = 419 then 'Frente Spot - Valdir'
+    when to_number(a.cd_fren_tran) = 409 then 'Frente Spot - Walter'
+    when to_number(a.cd_fren_tran) = 420 then 'Frente Spot - Walter'
     when to_number(a.cd_fren_tran) = 276 then 'Frente Daltro Reis'
   end,
   case
